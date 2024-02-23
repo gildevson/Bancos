@@ -205,6 +205,7 @@ function obterNomePorOcorrenciaEMotivo(ocorrencia, motivo) {
         "10-20": "Titulo Baixado e Transferido para Desconto/ Mudança de carteira  - Baixado pelo Banco",
         "15-00": "Crédito Disponível - Liquidação em Cartório",
         "15-15": "Liquidação em Cartório - Crédito",
+        "23-00": "Protesto enviado a Cartório",
         "17-00": "Crédito Disponível - Liquidação após Baixa ou Título não Registrado",
         "17-15": "Crédito Indisponível - Liquidação após Baixa ou Título não Registrado,",
         "24-00": "Ocorrência Aceita - Entrada Rejeitada por CEP Irregular - Entrada Rejeitada por CEP Irregular",
