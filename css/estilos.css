@@ -1,0 +1,849 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+footer {
+    width: 100%;
+    background: #202020;
+    color: white;
+    margin-top: 21%;
+}
+
+
+:root {
+    --my-color: rgb(0, 255, 42)(21, 255, 0);
+}
+
+
+.container-footer-all {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.container-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colum1 {
+    max-width: 400px;
+}
+
+.colum1 h1 {
+    font-size: 22px;
+}
+
+.colum1 p {
+    font-size: 14px;
+    color: #C7C7C7;
+    margin-top: 20px;
+}
+
+.colum2 {
+    max-width: 400px;
+
+}
+
+.colum2 h1 {
+    font-size: 22px;
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img {
+    width: 36px;
+    height: 36px;
+}
+
+.row label {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+    text-decoration: none;
+}
+
+.colum3 {
+    max-width: 400px;
+}
+
+.colum3 h1 {
+    font-size: 22px;
+}
+
+.row2 {
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img {
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label {
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+.container-footer {
+    width: 100%;
+    background: #101010;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.copyright {
+    color: #C7C7C7;
+    padding: 0px 3px 0px 48px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a {
+    text-decoration: none;
+    color: #C7C7C7;
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .container-body {
+        flex-wrap: wrap;
+    }
+
+    .colum1 {
+        max-width: 100%;
+        padding: 0px 3px 0px 48px;
+    }
+
+    .colum2,
+    .colum3 {
+        margin-top: 40px;
+        padding: 0px 3px 0px 48px;
+    }
+}
+
+a:link {
+    text-decoration: none;
+    /*ele esta retirando o subblinhado de links*/
+}
+
+
+
+.ac {
+    /*caixa de efeito +*/
+    margin-top: 8px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-sizing: border-box;
+    /*width: 85%;*/
+
+
+    margin-left: 15%;
+    list-style: NONE;
+}
+
+.ac .ac-header {
+    margin: 0;
+    padding: 0;
+}
+
+.ac .ac-trigger {
+    font: bold 16px Arial, sans-serif;
+    color: #111;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0px 10px 15px;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color .25s ease;
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    border: 0;
+}
+
+.ac .ac-trigger::after {
+    content: "+";
+    text-align: center;
+    width: 15px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    position: absolute;
+    right: 10px;
+    top: 50%
+}
+
+.ac .ac-trigger:focus {
+    color: #8a8a8a
+}
+
+.ac .ac-panel {
+    overflow: hidden;
+    transition-timing-function: ease;
+
+}
+
+.ac .ac-panel .ac-text {
+    font: 15px/24px Arial, sans-serif;
+    color: #111;
+    width: 75%;
+    margin: 0px 3px 0px 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 80%;
+    height: unset;
+
+
+}
+
+.ac.js-enabled .ac-panel {
+    visibility: hidden
+}
+
+.ac.is-active .ac-panel {
+    visibility: visible
+}
+
+.ac.is-active>.ac-header .ac-trigger::after {
+    content: "–"
+}
+
+.cor {
+    background: #002B49;
+    text-align: center;
+}
+
+
+.navigation {
+    position: fixed;
+    width: 50px;
+    height: 100%;
+    background: #282835;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation:hover,
+.navigation.active {
+    width: 200px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+
+}
+
+.navigation ul li:hover {
+    background-color: #F1F1F1;
+
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.navigation ul li a:hover {
+    color: #191980;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa {
+    font-size: 24px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 50px;
+    line-height: 50px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #b62424;
+    cursor: pointer;
+}
+
+
+.toggle:hover {
+    background: #2c23a5;
+
+}
+
+.toggle.active {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+
+.toggle.active::before {
+    content: '\f00d';
+}
+
+.imagem_finanblue {
+    background-color: #002B49;
+    text-align: center;
+    /*centraliza imagem Finanblue*/
+    height: 30%;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    align-items: center;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100vw
+        /*padding: 45px 48px 44px 48px;*/
+
+
+}
+
+
+.testeTexto {
+    margin-top: 15px;
+    font-size: large;
+    box-sizing: border-box;
+    padding-left: 35%;
+    background-color: #002B49;
+    color: white;
+    margin-left: 0.8%;
+    /*era 15% dava tudo certo*/
+    margin-right: 0.2%;
+    padding: 10px 48px 10px 48px;
+    border-radius: 10PX;
+
+}
+
+.testeTexto2 {
+    font: bold 16px Arial, sans-serif;
+    color: #111;
+    text-align: left;
+    width: 100%;
+    padding: 5px 0px 8px 10px;
+    display: block;
+    background-color: transparent;
+    transition: color .25s ease;
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    border: 0;
+}
+
+
+
+
+
+
+.search-container {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.search-container input {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+.search-container button {
+    padding: 8px;
+}
+
+.search-results {
+    margin-top: 20px;
+}
+
+.ac-panel {
+    transition: background-color 0.3s;
+}
+
+
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.s ease-in-out;
+}
+
+.carousel-item {
+    flex: 1 0 100%;
+}
+
+
+.ac1 {
+    margin-top: 8px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-left: 15%;
+    list-style: NONE;
+}
+
+.ac1 .ac-header {
+    margin: 0;
+    padding: 0;
+}
+
+.ac1 .ac-trigger {
+    font: bold 16px Arial, sans-serif;
+    color: #111;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0px 10px 15px;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color .25s ease;
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    border: 0;
+}
+
+.ocorrencia {
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    margin: 10px;
+    display: block;
+
+
+
+}
+
+.digite {
+    width: 30%;
+    padding: 15px;
+    margin-bottom: 1px;
+
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+
+.meuBotao {
+    width: 30%;
+    /* Largura inicial */
+    padding: 10px;
+    /* Padding inicial */
+    background-color: #007BFF;
+    color: #ffffff;
+    margin: 1%;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    /* Centraliza o texto no botão */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+
+
+    .meuBotao {
+        width: 70%;
+        display: flex;
+        /* Largura para telas menores */
+        padding: 1em;
+        /* Padding para telas menores */
+    }
+}
+
+/* Ajustes para telas muito pequenas (por exemplo, smartphones em modo retrato) */
+@media (max-width: 480px) {
+    .meuBotao {
+        width: 90%;
+        /* Largura para telas muito pequenas */
+    }
+}
+
+
+.testeTexto1 {
+    margin-top: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 35%;
+    background-color: #002B49;
+    color: white;
+    margin-left: 0.8%;
+    /*era 15% dava tudo certo*/
+    margin-right: 0.2%;
+    padding: 10px 48px 10px 48px;
+    border-radius: 10PX;
+}
+
+
+.logo_bradesco {
+
+    width: 2.0%;
+    height: auto;
+    /* Espaçamento entre o texto e a imagem */
+}
+
+
+.logo_itau {
+
+
+    width: 2%;
+    height: auto;
+    /* Altura automática mantendo a proporção */
+
+    /* Espaçamento entre o texto e a imagem */
+}
+
+.logo_bbrasil {
+
+
+    width: 2%;
+    height: auto;
+    /* Altura automática mantendo a proporção */
+
+    /* Espaçamento entre o texto e a imagem */
+}
+
+.logo_banrisul {
+
+
+    width: 2%;
+    height: auto;
+    /* Altura automática mantendo a proporção */
+
+    /* Espaçamento entre o texto e a imagem */
+}
+
+.logo_safra {
+
+
+    width: 1%;
+    height: 1%;
+    /* Altura automática mantendo a proporção */
+
+    /* Espaçamento entre o texto e a imagem */
+}
+
+.logo_caixa {
+
+    width: 2%;
+    height: auto;
+    /* Altura automática mantendo a proporção */
+
+    /* Espaçamento entre o texto e a imagem */
+}
+
+.resultado {
+    color: red;
+    margin: auto;
+    margin: 15px;
+
+}
+
+
+
+.logo_sicoob {
+
+
+    width: 3%;
+    height: auto;
+    /* Altura automática mantendo a proporção */
+
+    /* Espaçamento entre o texto e a imagem */
+}
+
+
+.logo_grafeno {
+
+
+    width: 2%;
+    height: auto;
+    /* Altura automática mantendo a proporção */
+
+    /* Espaçamento entre o texto e a imagem */
+}
+
+
+.consultar.todos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.todos {
+    background-color: #002B49;
+    /* Cor de fundo */
+    color: rgb(216, 80, 27);
+    /* Cor do texto */
+    padding: 12px 20px;
+    /* Espaçamento interno */
+    border: none;
+    /* Remove a borda */
+    border-radius: 4px;
+    /* Borda arredondada */
+    cursor: pointer;
+    /* Cursor ao passar por cima */
+    transition: background-color 0.6s ease;
+    /* Transição suave */
+    max-width: 100%;
+    /* Largura máxima */
+    margin-bottom: 15px;
+    /* Espaçamento inferior */
+    font-weight: bold;
+    /* Texto em negrito */
+    letter-spacing: 1px;
+    /* Espaçamento entre letras */
+}
+
+
+.todos:focus {
+    outline: none;
+    /* Remove o contorno ao focar */
+
+}
+
+
+.resultadoTodos {
+    margin-top: 10px;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+}
+
+.resultadoTodos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resultadoTodos th,
+.resultadoTodos td {
+    border: 1px solid #161616;
+    padding: 8px;
+    text-align: left;
+}
+
+.resultadoTodos th {
+    background-color: #f2f2f2;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .resultadoTodos th,
+    .resultadoTodos td {
+        padding: 4px;
+    }
+}
+
+.resultadoTodos tr:nth-child(odd) {
+    background-color: #d5d9df;
+    /* Cor para linhas ímpares */
+}
+
+.resultadoTodos tr:nth-child(even) {
+    background-color: #ffffff;
+    /* Cor para linhas pares */
+}
+
+.botao-voltar {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    /* Muda para bloco para ocupar a largura total */
+    margin: 0 auto;
+    /* Define margens automáticas para centralizar horizontalmente */
+    cursor: pointer;
+    border-radius: 8px;
+    max-width: 200px;
+    /* Largura máxima */
+    min-width: 100px;
+    /* Largura mínima */
+    width: 30%;
+    /* Largura relativa */
+}
+
+@media screen and (max-width: 600px) {
+    .botao-voltar {
+        font-size: 14px;
+
+        /* Reduz o tamanho da fonte em telas menores */
+    }
+}
+
+
+
+
+
+
+.conteiner {
+    display: flex;
+}
+
+/* Estilo para o contêiner da tabela */
+.conteiner-tabela {
+    flex-grow: 1;
+    margin-left: 20px;
+    /* Espaçamento à esquerda */
+}
+
+/* Estilo para a tabela */
+#tabelaResultado {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Estilo para as células da tabela */
+#tabelaResultado td,
+#tabelaResultado th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para as células do cabeçalho da tabela */
+#tabelaResultado th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #f2f2f2;
+}
+
+/* Estilos para tornar responsivo */
+@media only screen and (max-width: 600px) {
+    .conteiner {
+        flex-direction: column;
+    }
+
+    .conteiner-tabela {
+        margin-left: 0;
+        margin-top: 20px;
+        /* Espaçamento no topo */
+    }
+}
+
+
+.meuBotaoComando {
+    width: 30%; /* Largura inicial */
+    padding: 10px; /* Padding inicial */
+    background-color: #2eb339;
+    color: #ffffff;
+    margin: 1%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Centraliza o texto no botão */
+}
+
+.botaoDeVoltar {
+    width: 5%;
+    /* Largura inicial */
+    padding: 10px;
+    /* Padding inicial */
+    background-color: #9b1431;
+    color: #ffffff;
+    margin: 1%;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    /* Centraliza o texto no botão */
+}
+
+#resultadoTabela {
+    margin-top: 10px;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}

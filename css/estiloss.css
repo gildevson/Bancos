@@ -1,0 +1,116 @@
+/* Estilo para o contêiner da lista */
+.ac1 {
+    list-style-type: none;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o cabeçalho */
+.testeTexto1 {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para o logo */
+.logo_bradesco {
+    width: 50px; /* Largura do logo */
+    margin-right: 10px; /* Espaçamento à direita */
+}
+
+/* Estilo para o título do cabeçalho */
+.ac-header {
+    margin-bottom: 20px;
+}
+
+/* Estilo para o botão de consulta */
+.ac-trigger {
+    background-color: #007bff; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.ac-trigger:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o contêiner dos campos de entrada */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilo para os campos de entrada e rótulos */
+.ocorrencia, .digite {
+    flex: 0 0 50%; /* 2 colunas em telas maiores */
+    margin-bottom: 10px;
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para o contêiner dos botões */
+.botaoOcorrencia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Estilo para os botões */
+.meuBotaoComando {
+    padding: 10px 20px; /* Espaçamento interno para tornar o botão maior */
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor em fora de mão quando passar por cima */
+}
+
+/* Hover effect */
+.meuBotaoComando:hover {
+    background-color: #45a049; /* Cor um pouco mais escura quando o mouse está sobre o botão */
+}
+
+/* Estilo para a div que contém a tabela e o botão */
+div {
+    display: flex; /* Usando flexbox para alinhar os elementos */
+    justify-content: space-between; /* Espaçamento entre a tabela e o botão */
+    align-items: center; /* Alinhamento vertical dos elementos */
+}
+/* Estilo para o botão Comandos Bancários */
+.botao-comandos {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    text-align: right; /* Alinhamento à direita */
+}
+
+/* Estilo para a tabela de resultados */
+#tabelaResultado {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px; /* Espaçamento no topo */
+}
+
+/* Estilo para as células da tabela */
+#tabelaResultado td, #tabelaResultado th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para as células do cabeçalho da tabela */
+#tabelaResultado th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #f2f2f2;
+}

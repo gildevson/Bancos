@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bancos</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="script01.js"> </script>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+
+
+    <div class="imagem_finanblue">
+        <img src="icon/new_log_finanblue.png" alt="">
+    </div>
+
+
+    <div class="search-container">
+        <input type="text" id="searchInput" oninput="filterList()" placeholder="Pesquisar Banco">
+
+
+
+    </div>
+
+    <ul class="accordion-container">
+        <li class="ac1">
+            <h3 class="testeTexto1">
+                <img class="logo_bradesco" src="./icon/logo_bradesco.png" alt="Logo Bradesco">
+                Bradesco - CNAB400 237
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger" onclick="toggleConsultar()">Consultar Ocorrência e Motivo</button>
+
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrencia" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivo" placeholder="Digite o motivo">
+                </div>
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultar()">Consultar</button>
+                    <div class="resultado" id="resultado"></div>
+                
+                    
+                    <div>
+                        <div id="resultadoTabela"></div>
+                        <button class="meuBotaoComando" onclick="mostrarTodasTabelas()">Comandos Bancários</button>
+                        <div id="resultadoTabela"></div>
+                    </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todos()">TODAS OCORRÊNCIAS BRADESCO</button>
+                    <button class="botao-voltar" id="botaoVoltar" onclick="voltarTodos()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodos"></div>
+                </div>
+
+
+            </div>
+        </li>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_itau" src="./icon/logo_itau.png" alt="Logo Bradesco">
+                itaú - CNAB400 341
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaItau" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoItau" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarItau()">Consultar</button>
+                    <div class="resultado" id="resultadoitau"></div>
+                </div>
+
+                <div>
+                    <div id="resultadoTabelaItau"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasItau()">Comandos Bancários</button>
+                    <div id="resultadoTabelaItau"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosItau()">TODAS OCORRÊNCIAS ITAÚ</button>
+                    <button class="botao-voltar" id="botaoVoltarItau" onclick="voltarTodosItau()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosItau"></div>
+                </div>
+                
+            </div>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_bbrasil" src="./icon/logo_bbrasil.png" alt="Logo Bradesco">
+                Banco do Brasil - CNAB400 001
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaBB" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoBB" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarBB()">Consultar</button>
+                    <div class="resultado" id="resultadoBB"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaBB"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasBB()">Comandos Bancários</button>
+                    <div id="resultadoTabelaBB"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosBB()">TODAS OCORRÊNCIAS BANCO DO BRASIL CNAB400</button>
+                    <button class="botao-voltar" id="botaoVoltarBB" onclick="voltarTodosBB()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosBB"></div>
+                </div>
+                
+            </div>
+
+        </li>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_bbrasil" src="./icon/logo_bbrasil.png" alt="Logo Bradesco">
+                Banco do Brasil - CNAB240 001
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaBB240" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoBB240" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarBB240()">Consultar</button>
+                    <div class="resultado" id="resultadoBB240"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaBB240"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasBB240()">Comandos Bancários</button>
+                    <div id="resultadoTabelaBB240"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosBB240()">TODAS OCORRÊNCIAS BANCO DO BRASIL CNAB240</button>
+                    <button class="botao-voltar" id="botaoVoltarBB240" onclick="voltarTodosBB240()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosBB240"></div>
+                </div>
+            </div>
+
+        </li>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_banrisul" src="./icon/logo_banrisul.png" alt="logo_banrisul">
+                Banco Banrisul - CNAB400 - 041
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaBanrisul" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoBanrisul" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarBanrisul()">Consultar</button>
+                    <div class="resultado" id="resultadoBanrisul"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaBanrisul"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasBanrisul()">Comandos Bancários</button>
+                    <div id="resultadoTabelaBanrisul"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosBanrisul()">TODAS OCORRÊNCIAS BANCO BANRISUL</button>
+                    <button class="botao-voltar" id="botaoVoltarBanrisul" onclick="voltarTodosBanrisul()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosBanrisul"></div>
+                </div>
+            </div>
+
+        </li>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_safra" src="./icon/logo_safra.png" alt="logo_safra">
+                Safra - CNAB400 - 422
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaSafra" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoSafra" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarSafra()">Consultar</button>
+                    <div class="resultado" id="resultadoSafra"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaSafra"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasSafra()">Comandos Bancários</button>
+                    <div id="resultadoTabelaSafra"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosSafra()">TODAS OCORRÊNCIAS BANCO SAFRA</button>
+                    <button class="botao-voltar" id="botaoVoltarSafra" onclick="voltarTodosSafra()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosSafra"></div>
+                </div>
+            </div>
+
+        </li>
+
+
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_caixa" src="./icon/logo_caixa.png" alt="logo_safra">
+                Caixa Economica Federal - CNAB240 104
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaCaixa240" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoCaixa240" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarCaixa240()">Consultar</button>
+                    <div class="resultado" id="resultadoCaixa240"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaCaixa240"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasCaixa240()">Comandos Bancários</button>
+                    <div id="resultadoTabelaCaixa240"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosCaixa240()">TODAS OCORRÊNCIAS BANCO CAIXA</button>
+                    <button class="botao-voltar" id="botaoVoltarCaixa240" onclick="voltarTodosCaixa240()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosCaixa240"></div>
+                </div>
+            </div>
+
+        </li>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_caixa" src="./icon/logo_bancoBancoBIC.png" alt="logo_bancobic">
+                Bic Banco - CNAB400 320
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaBancoBic" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoBancoBic" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarBancoBic()">Consultar</button>
+                    <div class="resultado" id="resultadoBancoBic"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaBancoBic"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasBancoBic()">Comandos Bancários</button>
+                    <div id="resultadoTabelaBancoBic"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosBancoBic()">TODAS OCORRÊNCIAS BANCO BIC BANCO</button>
+                    <button class="botao-voltar" id="botaoVoltarBancoBic" onclick="voltarTodosBancoBic()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosBancoBic"></div>
+                </div>
+            </div>
+
+        </li>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_caixa" src="./icon/logo_livebank.png" alt="logo_bancoLiveBank">
+                LiveBank - CNAB400 274
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaLiveBank" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoLiveBank" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarLiveBank()">Consultar</button>
+                    <div class="resultado" id="resultadoLiveBank"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaLiveBank"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasLiveBank()">Comandos Bancários</button>
+                    <div id="resultadoTabelaLiveBank"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosLiveBank()">TODAS OCORRÊNCIAS BANCO LIVEBANK</button>
+                    <button class="botao-voltar" id="botaoVoltarLiveBank" onclick="voltarTodosLiveBank()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosLiveBank"></div>
+                </div>
+            </div>
+
+        </li>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_caixa" src="./icon/logo_santander.png" alt="logo_bancoLiveBank">
+                Santander - CNAB240 033
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consulta de Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaSantander" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoSantander" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarSantander()">Consultar</button>
+                    <div class="resultado" id="resultadoSantander"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaSantander"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasSantander()">Comandos Bancários</button>
+                    <div id="resultadoTabelaSantander"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosSantander()">TODAS OCORRÊNCIAS BANCO SANTANDER</button>
+                    <button class="botao-voltar" id="botaoVoltarSantander" onclick="voltarTodosSantander()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosSantander"></div>
+                </div>
+            </div>
+
+        </li>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_sicoob" src="./icon/logo_sicoob.png" alt="logo_bancoLiveBank">
+                Sicoob - CNAB240 756
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaSicoob240" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoSicoob240" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarSicoob240()">Consultar</button>
+                    <div class="resultado" id="resultadoSicoob240"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaSicoob240"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasSicoob240()">Comandos Bancários</button>
+                    <div id="resultadoTabelaSicoob240"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosSicoob240()">TODAS OCORRÊNCIAS BANCO SICOOB</button>
+                    <button class="botao-voltar" id="botaoVoltarSicoob240" onclick="voltarTodosSicoob240()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosSicoob240"></div>
+                </div>
+            </div>
+
+        </li>
+        <li class="ac1">
+
+            <h3 class="testeTexto1">
+                <img class="logo_grafeno" src="./icon/logo_grafeno.png" alt="logo_bancoLiveBank">
+                Grafeno - CNAB400 - 237
+            </h3>
+
+            <h2 class="ac-header">
+                <button class="ac-trigger">Consultar Ocorrência e Motivo</button>
+            </h2>
+
+            <div class="container">
+                <div class="ocorrencia">
+                    <label for="ocorrencia">Ocorrência:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="ocorrenciaGrafeno400" placeholder="Digite a ocorrência">
+                </div>
+
+                <div class="ocorrencia">
+                    <label for="motivo">Motivo:</label>
+                </div>
+
+                <div class="digite">
+                    <input type="text" id="motivoGrafeno400" placeholder="Digite o motivo">
+                </div>
+
+
+                <div class="botaoOcorrencia">
+                    <button class="meuBotao" onclick="consultarGrafeno400()">Consultar</button>
+                    <div class="resultado" id="resultadoGrafeno400"></div>
+                </div>
+                <div>
+                    <div id="resultadoTabelaGrafeno400"></div>
+                    <button class="meuBotaoComando" onclick="mostrarTodasTabelasGrafeno400()">Comandos Bancários</button>
+                    <div id="resultadoTabelaGrafeno400"></div>
+                </div>
+                <div class="consultar todos">
+                    <button class="todos" onclick="todosGrafeno400()">TODAS OCORRÊNCIAS BANCO GRAFENO</button>
+                    <button class="botao-voltar" id="botaoVoltarGrafeno400" onclick="voltarTodosGrafeno400()"
+                        style="display: none;">Voltar</button>
+                    <div class="resultadoTodos" id="resultadoTodosGrafeno400"></div>
+                </div>
+            </div>
+
+        </li>
+
+
+
+    </ul>
+
+
+    <script>new Accordion('.accordion-container');</script>
+    <footer>
+
+        <div class="container-footer-all">
+
+            <div class="container-body">
+
+                <div class="colum1">
+                    <h1>Mais informações</h1>
+
+                    <p>Prezados,
+                        Gostaria de informar que esse projeto está em desenvolvimento. Estou trabalhando ativamente para
+                        atender aos requisitos. Manteremos todos atualizados sobre o progresso.
+                        Agradecemos pelo apoio contínuo.
+                        Atenciosamente!</p>
+
+                </div>
+
+                <div class="colum2">
+
+                    <h1>Redes Sociais</h1>
+
+                    <a href="https://www.facebook.com/finanbluebr/?locale=pr_br">
+                        <div class="row">
+                            <img src="icon/facebook.png">
+                            <label>facebook</label>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/finanbluebr/" text-decoration: none>
+                        <div class="row">
+                            <img src="icon/instagram.png">
+                            <label>Instagram</label>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC8jmchxKO3u9aA37xIKJ4XQ">
+                        <div class="row">
+                            <img src="icon/youtube.png">
+                            <label>Youtube</label>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/company/finanblue/mycompany/">
+                        <div class="row">
+                            <img src="icon/linkindin.png">
+                            <label>Linkedin</label>
+                        </div>
+                    </a>
+                    <a href="https://finanblue.com.vc/">
+                        <div class="row">
+                            <img src="icon/tagFinanbluelog.png">
+                            <label>Finanblue</label>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="colum3">
+
+                    <h1>Informações de contatos</h1>
+
+                    <div class="row2">
+                        <img src="icon/house.png">
+                        <label>Endereço: Av. Cândido de Abreu, 427 - Centro Cívico, Curitiba - PR, 80530-903</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="icon/smartphone.png">
+                        <label>(41)3090-5150</label>
+                    </div>
+                    <div class="row2">
+                        <img src="icon/whatsapgreen.png">
+                        <label>(41)99216-0075</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="icon/contact.png">
+                        <label>Suporte@finanblue.com.vc</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-footer">
+            <div class="footer">
+                <div class="copyright">
+                    © 2023 Todos os direitos reservados | <a href="https://github.com/gildevson">Gildevson</a>
+                </div>
+
+                <div class="information">
+                    <a href="">informações de campanha</a> | <a href="">Privacidade e Politica</a> | <a href="">Termos e
+                        condições</a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</html>
