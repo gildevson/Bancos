@@ -6,7 +6,7 @@
 ---
 # Como usar ?
 
-1. Segue o link https://ocorrenciasbancarias.netlify.app
+1. Segue o link https://bancosocorrencias.netlify.app/
 2. Digite uma ocorrencia e motivo de algun layout bancário.
 3. Caso não saiba os bancos tem como padrão(ocorrencia 02 motivo 00).
 4. Caso você digite uma ocorrencia aleatoriamente vai disparar (Combinação de ocorrência e motivo inválida). 
